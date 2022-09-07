@@ -1,0 +1,4 @@
+cd ../../../caseFiles/tgv/
+make
+cp 3DNS ../../runFolder/fmdfTests/p8-22x22x22/
+cd ../../runFolder/fmdfTests/p8-22x22x22/

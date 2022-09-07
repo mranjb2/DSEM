@@ -1,0 +1,7 @@
+#PBS -l nodes=5:ppn=20
+#PBS -l walltime=00:72:00:00
+#PBS -N DNS-22p8
+
+cd /home/mranjb2/3DCode/TGV/runFolder/fmdfTests/p8-22x22x22
+mpirun -n 100 3DNS > run.out
+

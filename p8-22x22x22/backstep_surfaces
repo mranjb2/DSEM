@@ -1,0 +1,16 @@
+!
+! boundary condition file for duct
+!
+surface            = 1
+boundary condition = inflow
+equation type      = element
+end surface 1
+surface            = 2
+boundary condition = outflow
+equation type      = element
+end surface 2
+surface            = 3
+boundary condition = wallisoth
+equation type      = element
+end surface 3
+end all surfaces

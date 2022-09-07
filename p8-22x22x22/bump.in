@@ -1,0 +1,81 @@
+!
+! input file for channel flow
+!
+! Run parameters follow:
+!
+  title = flow in a channel
+!
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+! run file name = DNS-22p8
+! mesh file     = tgv-22x22x22-p8.mesh
+! geometry file = backstep_surfaces
+  run file name = DNS-22p8.rst
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  time step order         = 4
+  use a cfl = 0.3d0
+  final time = 20.0d0
+! maximum number of steps = 0
+  maximum number of steps = 100000000
+! output interval = 1.7d-3
+  output frequency = 4000
+!  movie
+!  write endplot file
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ write verbose file
+! steady-state computation
+  time accurate computation
+  use the global time step
+  periodic
+! save restart file at end
+! source terms = fmdf
+! source terms = time_dependent
+  source terms = none
+! resolution  = 6 
+  length     = 6.28318530717959d0
+  read metis file
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ prntdis
+! smagorinsk
+! Cs = 0.17
+! numax = 2
+! statistic
+! average
+! rms
+! continue
+! fmdf
+! restfldr
+! drops
+! drmov
+! drinter = 5.0d0
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+! Euler physics parameters
+!
+  free stream mach number =  1.0d0
+  prandtl number          =  0.72d0
+  reynolds number         =  100.0d0
+  wall temperature        =  100.0d0
+  outlet pressure         =  1.0d0
+  Sc                      =  0.72d0
+  sgsSh                   =  0.72d0
+  COmega                  =  3.0d0
+  Da                      =  180000.0d0
+  Ce                      =  7.0d0
+  Ze                      =  22.01d0
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+! user keywords for this problem:
+!
+  theta = 0.0d0
+  phi   = 0.0d0
+!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+! particle parameters
+!
+!
+  RHOP  = 1000.0d0
+  TBOIL = 4.0d0
+  PBOIL = 1.0d0
+  TAUP0 = 0.001d0
+  A1    = 0.8d0
+  A2    = 1.0d0
+!
+! timing information:
+!
